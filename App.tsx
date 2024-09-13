@@ -1,12 +1,12 @@
-/* eslint-disable @typescript-eslint/camelcase */
-
+/* eslint-disable camelcase */
 import { Loading } from '@components/Loading'
 import {
   Roboto_400Regular,
   Roboto_700Bold,
   useFonts,
 } from '@expo-google-fonts/roboto'
-import { Groups } from '@screens/Groups'
+
+import { NewGroup } from '@screens/NewGroup'
 import { defaultTheme } from '@theme/index'
 import { StatusBar } from 'react-native'
 import { ThemeProvider } from 'styled-components/native'
@@ -21,7 +21,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      {fontsLoaded ? <Groups /> : <Loading/>}
+      {fontsLoaded ? <NewGroup /> : <Loading />}
     </ThemeProvider>
   )
 }

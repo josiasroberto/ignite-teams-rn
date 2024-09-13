@@ -9,7 +9,7 @@ type HeaderProps = {
 export function Header({ showBackButton = false }: HeaderProps) {
   return (
     <S.Container>
-      {!showBackButton && (
+      {showBackButton && (
         <S.BackButton>
           <S.BackIcon />
         </S.BackButton>
