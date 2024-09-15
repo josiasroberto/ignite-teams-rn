@@ -7,12 +7,19 @@ import {
   ListEmpty,
   Highlight,
 } from '@components/index'
+import { useNavigation } from '@react-navigation/native'
 
 import { useState } from 'react'
 import { FlatList } from 'react-native'
 
 export function Groups() {
   const [groups, setgroups] = useState([])
+
+  const navigation = useNavigation()
+
+  function handleNewGroup() {
+    navigation.navigate('new')
+  }
 
   return (
     <S.Container>
@@ -30,7 +37,7 @@ export function Groups() {
         showsVerticalScrollIndicator={false}
       />
 
-      <Button title="Criar nova turma" />
+      <Button title="Criar nova turma" onPress={handleNewGroup} />
     </S.Container>
   )
 }

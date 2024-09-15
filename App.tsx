@@ -9,8 +9,8 @@ import { defaultTheme } from '@theme/index'
 import { StatusBar } from 'react-native'
 import { ThemeProvider } from 'styled-components/native'
 
-import { Players } from '@screens/index'
 import { Loading } from '@components/index'
+import { Routes } from '@routes/index'
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold })
@@ -22,7 +22,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      {fontsLoaded ? <Players /> : <Loading />}
+      {fontsLoaded ? <Routes /> : <Loading />}
     </ThemeProvider>
   )
 }
