@@ -1,7 +1,8 @@
 {
-  "extends" : "@rocketseat/eslint-config/react"
+  "extends" : "@rocketseat/eslint-config/react",
 
-  // "rules" : {   
-  //   "@typescript-eslint/camelcase": "off"
-  // }
+  "rules" : {   
+    // "@typescript-eslint/camelcase": "off"
+    "no-useless-catch": "off" // "off" or 0 both work
+  }
 }
